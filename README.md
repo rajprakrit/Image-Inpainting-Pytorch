@@ -32,6 +32,14 @@ Download the pretrained model [here](https://drive.google.com/file/d/1uMghKl883-
 ``` bash
 $ bash ./run_test.sh
 ``` 
+
+### A simple interactive inpainting GUI
+<img src="./pics/gui.png" width="100%" alt="gui">
+A GUI written using tkinter is given in `painter_gmcnn.py`. Start it by running the following script
+```shell
+python painter.py
+```
+
 ## Acknowledgments
 The main code is based upon [deepfillv2](https://github.com/zhaoyuzhi/deepfillv2).  
 The code of "Contextual Attention" is based upon [generative-inpainting-pytorch](https://github.com/daa233/generative-inpainting-pytorch).  
