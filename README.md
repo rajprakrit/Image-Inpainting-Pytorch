@@ -35,9 +35,10 @@ $ bash ./run_test.sh
 
 ### A simple interactive inpainting GUI
 <img src="./tkinterGUI.png" width="100%" alt="gui">
-A GUI written using tkinter is given in `painter.py`. Start it by running the following script
+A GUI written using tkinter is given in `painter.py`.
+* To the GUI:
 ``` bash
-python painter.py
+$ bash ./run_test.sh
 ``` 
 
 ## Acknowledgments
