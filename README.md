@@ -34,7 +34,7 @@ $ bash ./run_test.sh
 ``` 
 
 ### A simple interactive inpainting GUI
-<img src="./pics/gui.png" width="100%" alt="gui">
+<img src="./tkinterGUI.png" width="100%" alt="gui">
 A GUI written using tkinter is given in `painter_gmcnn.py`. Start it by running the following script
 ```shell
 python painter.py
