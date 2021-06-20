@@ -35,10 +35,10 @@ $ bash ./run_test.sh
 
 ### A simple interactive inpainting GUI
 <img src="./tkinterGUI.png" width="100%" alt="gui">
-A GUI written using tkinter is given in `painter_gmcnn.py`. Start it by running the following script
-```shell
+A GUI written using tkinter is given in `painter.py`. Start it by running the following script
+``` bash
 python painter.py
-```
+``` 
 
 ## Acknowledgments
 The main code is based upon [deepfillv2](https://github.com/zhaoyuzhi/deepfillv2).  
