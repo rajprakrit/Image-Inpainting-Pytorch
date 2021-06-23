@@ -37,7 +37,6 @@ python main.py
 <img src="./tkinterGUI.png" width="100%" alt="gui">
 A GUI written using tkinter is given in `painter.py`. Run the following code to launch the GUI
 ```shell
-
 python painter.py
 ```
 
