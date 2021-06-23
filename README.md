@@ -27,15 +27,19 @@ $ bash ./run_train.sh
 ``` 
 All training models and sample images will be saved in `./models/` and `./samples/` respectively.
 ## Testing
-Download the pretrained model [here](https://drive.google.com/file/d/1uMghKl883-9hDLhSiI8lRbHCzCmmRwV-/view?usp=sharing) and put it in `./pretrained_model/`.
+Download the pretrained model [here](https://drive.google.com/file/d/1uMghKl883-9hDLhSiI8lRbHCzCmmRwV-/view?usp=sharing) and put it in `./saved_model/`.
 * To test a model:
-``` bash
-$ bash ./run_test.sh
-``` 
+```shell
+python main.py
+```
 
 ### A simple interactive inpainting GUI
 <img src="./tkinterGUI.png" width="100%" alt="gui">
-A GUI written using tkinter is given in `painter.py`.
+A GUI written using tkinter is given in `painter.py`. Run the following code to launch the GUI
+```shell
+
+python painter.py
+```
 
 
 ### To run for a single image
