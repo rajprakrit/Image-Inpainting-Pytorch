@@ -36,7 +36,9 @@ $ bash ./run_test.sh
 ### A simple interactive inpainting GUI
 <img src="./tkinterGUI.png" width="100%" alt="gui">
 A GUI written using tkinter is given in `painter.py`.
-##To run for a single image
+
+
+###To run for a single image
 - Remove all files from test_data and tesd_data_mask
 - Now launch the GUI by running python painter.py
 - Load the desired image
