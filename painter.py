@@ -8,13 +8,8 @@ import subprocess
 import argparse
 import tensorflow as tf
 
-
-# os.environ['CUDA_VISIBLE_DEVICES'] = str(np.argmax([int(x.split()[2]) for x in subprocess.Popen(
-#     "nvidia-smi -q -d Memory | grep -A4 GPU | grep Free", shell=True, stdout=subprocess.PIPE).stdout.readlines()]))
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-# model_savepath = {'places2ful': 'model_places2ful512/', 'places2': 'model_places2ful/', 'celebAHQ': 'model_celebAHQ/',
-#                   'paris_streetview': 'model_paris/', 'celebA': 'model_celebA/'}
 
 class Paint(object):
     MARKER_COLOR = 'white'
@@ -35,10 +30,10 @@ class Paint(object):
         self.clear_button = Button(self.root, text='clear', command=self.clear, width=12, height=3)
         self.clear_button.grid(row=3, column=2)
 
-        self.c = Canvas(self.root, bg='white', width=680, height=520)
+        self.c = Canvas(self.root, bg='white', width=680, height=512)
         self.c.grid(row=0, column=0, rowspan=8)
 
-        self.out = Canvas(self.root, bg='white', width=680, height=520)
+        self.out = Canvas(self.root, bg='white', width=680, height=512)
         self.out.grid(row=0, column=1, rowspan=8)
 
         self.save_button = Button(self.root, text="save", command=self.save, width=12, height=3)
@@ -87,16 +82,19 @@ class Paint(object):
         assert len(self.mask_candidate) == len(self.rect_candidate)
 
     def load(self):
-        self.filename = tkFileDialog.askopenfilename(initialdir='./test_data',
+        self.filename = tkFileDialog.askopenfilename(initialdir='.',
                                                      title="Select file",
                                                      filetypes=(("png files", "*.png"), ("jpg files", "*.jpg"),
                                                                 ("all files", "*.*")))
         self.filename_ = self.filename.split('/')[-1][:-4]
         self.filepath = '/'.join(self.filename.split('/')[:-1])
         print(self.filename_, self.filepath)
+        # img = cv2.imread(self.filepath)
+        
         try:
             photo = Image.open(self.filename)
             self.image = cv2.imread(self.filename)
+            cv2.imwrite(os.path.join("./test_data", "1.png"), self.image)
         except:
             print('do not load image')
         else:
@@ -124,7 +122,7 @@ class Paint(object):
             self.mask[:,:,:] = 0
             for rect in self.mask_candidate:
                 self.mask[rect[1]:rect[3], rect[0]:rect[2], :] = 1
-        cv2.imwrite(os.path.join("./test_data_mask", self.filename_+'.png'), self.mask*255)
+        cv2.imwrite(os.path.join("./test_data_mask", '1.png'), self.mask*255)
 
     def fill(self):
         if self.mode == 'rect':
