@@ -5,7 +5,7 @@ This repository contains "Gated Convolution", "Contextual Attention" and "Spectr
 
 ## Demo
 
-[![GUI Demo](tkinter-demo.gif)]
+![GUI Demo](tkinter-demo.gif)
 
 ## Requirement
 - Python 3
