@@ -1,5 +1,5 @@
-## DeepFillv2_Pytorch
-This is a Pytorch re-implementation for the paper [Free-Form Image Inpainting with Gated Convolution](https://arxiv.org/abs/1806.03589).  
+## Image Inpainting
+This is a Pytorch implementation of an image inpainting module which is created to erase undesirable regions in an image.
 
 This repository contains "Gated Convolution", "Contextual Attention" and "Spectral Normalization".
 ## Requirement
