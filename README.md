@@ -51,3 +51,7 @@ python painter.py
 - Mask desired area and save
 - Now filling the masked area will provide you with desired result
 
+## Demo
+
+[![GUI Demo](tkinter-demo.gif)]
+
