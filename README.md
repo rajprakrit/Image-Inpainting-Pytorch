@@ -2,6 +2,11 @@
 This is a Pytorch implementation of an image inpainting module which is created to erase undesirable regions in an image.
 
 This repository contains "Gated Convolution", "Contextual Attention" and "Spectral Normalization".
+
+## Demo
+
+[![GUI Demo](tkinter-demo.gif)]
+
 ## Requirement
 - Python 3
 - OpenCV-Python
@@ -50,8 +55,4 @@ python painter.py
 - Load the desired image
 - Mask desired area and save
 - Now filling the masked area will provide you with desired result
-
-## Demo
-
-[![GUI Demo](tkinter-demo.gif)]
 
